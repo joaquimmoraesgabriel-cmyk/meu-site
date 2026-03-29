@@ -1,0 +1,825 @@
+﻿<!doctype html>
+<html lang="pt-BR" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JG Sites | Criação de Sites Profissionais em Minas Gerais - A partir de R$ 110/mês</title>
+    <!-- === SEO OTIMIZADO JG SITES === -->
+    <meta name="description" content="Criação de sites profissionais, modernos e rápidos em Minas Gerais. Landing pages e sites institucionais a partir de R$ 110/mês. Suporte dedicado, SEO otimizado e hospedagem inclusa.">
+    <meta name="keywords" content="criação de sites, sites profissionais, site para empresa, landing page, site barato, criação de site Minas Gerais, JG Sites, site responsivo, SEO">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="JG Sites">
+    <link rel="canonical" href="https://seusite.com.br"> <!-- Troque pelo seu domínio quando subir -->
+    <!-- Open Graph / WhatsApp / Instagram / Facebook -->
+    <meta property="og:title" content="JG Sites | Criação de Sites Profissionais">
+    <meta property="og:description" content="Sites profissionais bonitos e que vendem a partir de R$ 110/mês. Entrega rápida e suporte humanizado em Minas Gerais.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://seusite.com.br">
+    <meta property="og:site_name" content="JG Sites">
+    <meta property="og:image" content="jg.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="JG Sites | Criação de Sites Profissionais">
+    <meta name="twitter:description" content="Sites profissionais a partir de R$ 110/mês em Minas Gerais">
+    <meta name="twitter:image" content="jg.jpg">
+
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+    <script src="/_sdk/element_sdk.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Outfit',sans-serif
+        }
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth
+        }
+
+        :root {
+            --bg: #0f1117;
+            --surface: #1a1d27;
+            --surface2: #242836;
+            --accent: #3b82f6;
+            --accent2: #06b6d4;
+            --text: #e2e8f0;
+            --text-dim: #94a3b8;
+            --green: #22c55e;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text)
+        }
+
+        .nav-active {
+            color: var(--accent) !important;
+            border-bottom: 2px solid var(--accent)
+        }
+
+        .page {
+            display: none;
+            width: 100%
+        }
+
+            .page.active {
+                display: block
+            }
+
+        .gradient-text {
+            background: linear-gradient(135deg,var(--accent),var(--accent2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text
+        }
+
+        .card-glow {
+            transition: all .4s ease;
+            border: 1px solid rgba(59,130,246,.15)
+        }
+
+            .card-glow:hover {
+                border-color: rgba(59,130,246,.5);
+                box-shadow: 0 0 30px rgba(59,130,246,.1);
+                transform: translateY(-6px)
+            }
+
+        .float-in {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all .7s cubic-bezier(.22,1,.36,1)
+        }
+
+            .float-in.visible {
+                opacity: 1;
+                transform: translateY(0)
+            }
+
+        .stagger-1 {
+            transition-delay: .1s
+        }
+
+        .stagger-2 {
+            transition-delay: .2s
+        }
+
+        .stagger-3 {
+            transition-delay: .3s
+        }
+
+        .stagger-4 {
+            transition-delay: .4s
+        }
+
+        .stagger-5 {
+            transition-delay: .5s
+        }
+
+        @keyframes pulse-glow {
+            0%,100% {
+                box-shadow: 0 0 20px rgba(59,130,246,.2)
+            }
+
+            50% {
+                box-shadow: 0 0 40px rgba(59,130,246,.4)
+            }
+        }
+
+        .pulse-glow {
+            animation: pulse-glow 3s infinite
+        }
+
+        @keyframes float {
+            0%,100% {
+                transform: translateY(0)
+            }
+
+            50% {
+                transform: translateY(-10px)
+            }
+        }
+
+        .float-anim {
+            animation: float 4s ease-in-out infinite
+        }
+
+        @keyframes slide-right {
+            from {
+                transform: translateX(-100%);
+                opacity: 0
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1
+            }
+        }
+
+        .hero-bg {
+            background: radial-gradient(ellipse at 30% 20%,rgba(59,130,246,.12) 0%,transparent 50%),radial-gradient(ellipse at 70% 80%,rgba(6,182,212,.08) 0%,transparent 50%),var(--bg)
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg,var(--accent),#2563eb);
+            transition: all .3s;
+            position: relative;
+            overflow: hidden
+        }
+
+            .btn-primary:hover {
+                transform: scale(1.05);
+                box-shadow: 0 8px 30px rgba(59,130,246,.3)
+            }
+
+            .btn-primary:active {
+                transform: scale(.97)
+            }
+
+        .btn-whatsapp {
+            background: linear-gradient(135deg,#22c55e,#16a34a);
+            transition: all .3s
+        }
+
+            .btn-whatsapp:hover {
+                transform: scale(1.05);
+                box-shadow: 0 8px 30px rgba(34,197,94,.3)
+            }
+
+        .process-line {
+            position: relative
+        }
+
+            .process-line::before {
+                content: '';
+                position: absolute;
+                left: 20px;
+                top: 40px;
+                bottom: 0;
+                width: 2px;
+                background: linear-gradient(to bottom,var(--accent),transparent)
+            }
+
+        @media(max-width:768px) {
+            .process-line::before {
+                left: 16px
+            }
+        }
+
+        .example-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            background: var(--surface);
+            border: 1px solid rgba(255,255,255,.06);
+            transition: all .4s;
+            height: 240px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end
+        }
+
+            .example-card:hover {
+                border-color: rgba(59,130,246,.4);
+                transform: translateY(-4px)
+            }
+
+            .example-card .overlay {
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(to top,rgba(15,17,23,.95),rgba(15,17,23,.6));
+                opacity: 0;
+                transition: opacity .3s;
+                display: flex;
+                align-items: flex-end;
+                padding: 20px;
+                z-index: 20
+            }
+
+            .example-card:hover .overlay {
+                opacity: 1
+            }
+
+        .counter {
+            font-variant-numeric: tabular-nums
+        }
+
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0
+        }
+
+        .nav-link {
+            position: relative;
+            padding-bottom: 4px
+        }
+
+            .nav-link::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background: var(--accent);
+                transition: width .3s
+            }
+
+            .nav-link:hover::after {
+                width: 100%
+            }
+
+        .tag {
+            background: rgba(59,130,246,.15);
+            color: var(--accent);
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500
+        }
+
+        .tag-pro {
+            background: rgba(6,182,212,.15);
+            color: var(--accent2)
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -1px;
+            right: 20px;
+            background: linear-gradient(135deg,var(--accent),var(--accent2));
+            color: #fff;
+            padding: 4px 14px;
+            border-radius: 0 0 8px 8px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: .5px
+        }
+
+        .hamburger-line {
+            width: 24px;
+            height: 2px;
+            background: var(--text);
+            transition: all .3s;
+            display: block
+        }
+
+        .menu-open .hamburger-line:nth-child(1) {
+            transform: rotate(45deg) translate(5px,5px)
+        }
+
+        .menu-open .hamburger-line:nth-child(2) {
+            opacity: 0
+        }
+
+        .menu-open .hamburger-line:nth-child(3) {
+            transform: rotate(-45deg) translate(5px,-5px)
+        }
+
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .4s ease
+        }
+
+            .mobile-menu.open {
+                max-height: 300px
+            }
+    </style>
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+    </style>
+    <!-- SCHEMA.ORG para Google (melhora ranqueamento) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "JG Sites - Criação de Sites Profissionais",
+          "description": "Criação de sites profissionais em Minas Gerais a partir de R$ 110/mês",
+          "url": "https://seusite.com.br",
+          "telephone": "+55 35 99931-4821",
+          "image": "jg.jpg",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Minas Gerais",
+            "addressCountry": "BR"
+          },
+          "priceRange": "$$"
+        }
+    </script>
+
+    <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+
+</head>
+<body class="h-full">
+    <div id="app" class="w-full h-full overflow-auto">
+        <!-- NAV -->
+        <nav class="fixed top-0 left-0 right-0 z-50" style="background:rgba(15,17,23,.85);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.06)">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                <div class="flex items-center justify-between h-16">
+                    <div class="flex items-center gap-2 cursor-pointer" onclick="navigateTo('home')">
+                        <div class="w-9 h-9 rounded-lg flex items-center justify-center font-bold text-white" style="background:linear-gradient(135deg,var(--accent),var(--accent2))">
+                            JG
+                        </div><span class="font-bold text-lg">Sites</span>
+                    </div>
+                    <div class="hidden md:flex items-center gap-8">
+                        <a class="nav-link cursor-pointer text-sm font-medium" style="color:var(--text-dim)" onclick="navigateTo('home')" data-nav="home">Principal</a> <a class="nav-link cursor-pointer text-sm font-medium" style="color:var(--text-dim)" onclick="navigateTo('examples')" data-nav="examples">Exemplos</a> <a class="nav-link cursor-pointer text-sm font-medium" style="color:var(--text-dim)" onclick="navigateTo('contact')" data-nav="contact">Contato</a> <button class="btn-whatsapp text-white text-sm font-semibold px-5 py-2 rounded-full flex items-center gap-2" onclick="window.open('https://wa.me/?text=Olá%20quero%20saber%20mais%20sobre%20criação%20de%20site.','_blank')"> <i data-lucide="message-circle" style="width:16px;height:16px"></i> WhatsApp </button>
+                    </div><button id="hamburger" class="md:hidden flex flex-col gap-1.5 p-2" onclick="toggleMobileMenu()"> <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span> </button>
+                </div>
+                <div id="mobileMenu" class="mobile-menu md:hidden">
+                    <div class="flex flex-col gap-4 py-4 border-t" style="border-color:rgba(255,255,255,.06)">
+                        <a class="text-sm font-medium cursor-pointer" style="color:var(--text-dim)" onclick="navigateTo('home');toggleMobileMenu()">Principal</a> <a class="text-sm font-medium cursor-pointer" style="color:var(--text-dim)" onclick="navigateTo('examples');toggleMobileMenu()">Exemplos</a> <a class="text-sm font-medium cursor-pointer" style="color:var(--text-dim)" onclick="navigateTo('contact');toggleMobileMenu()">Contato</a> <button class="btn-whatsapp text-white text-sm font-semibold px-5 py-2 rounded-full flex items-center gap-2 w-fit" onclick="openWhatsApp('Olá quero saber mais sobre criação de site.')"> <i data-lucide="message-circle" style="width:16px;height:16px"></i> WhatsApp </button>
+                    </div>
+                </div>
+            </div>
+        </nav><!-- PAGE: HOME -->
+        <div id="page-home" class="page active">
+            <!-- HERO -->
+            <section class="hero-bg pt-28 pb-20 px-4 sm:px-6 relative overflow-hidden">
+                <div id="particles" class="absolute inset-0 pointer-events-none"></div>
+                <div class="max-w-6xl mx-auto text-center relative z-10">
+                    <div class="float-in">
+                        <span class="tag mb-4 inline-block">✨ Criação de Sites Profissionais</span>
+                        <h1 id="heroTitle" class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mt-4 mb-6">Seu negócio merece um<br><span class="gradient-text">site profissional</span></h1>
+                        <p id="heroSubtitle" class="text-lg sm:text-xl max-w-2xl mx-auto mb-10" style="color:var(--text-dim)">Sites modernos, rápidos e responsivos que transformam visitantes em clientes. A partir de R$110/mês.</p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <button class="btn-primary text-white font-semibold px-8 py-3.5 rounded-full text-base" onclick="navigateTo('contact')">Ver Planos</button> <button class="font-semibold px-8 py-3.5 rounded-full text-base border flex items-center justify-center gap-2" style="border-color:rgba(255,255,255,.15);color:var(--text-dim)" onclick="navigateTo('examples')"> <i data-lucide="eye" style="width:18px;height:18px"></i> Ver Exemplos </button>
+                        </div>
+                    </div>
+                    <div class="mt-16 float-in stagger-2 flex justify-center gap-8 sm:gap-16 flex-wrap">
+                        <div class="text-center">
+                            <div class="counter text-3xl font-bold gradient-text" data-target="50">
+                                0
+                            </div>
+                            <div class="text-sm mt-1" style="color:var(--text-dim)">
+                                Sites Criados
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div class="counter text-3xl font-bold gradient-text" data-target="98">
+                                0
+                            </div>
+                            <div class="text-sm mt-1" style="color:var(--text-dim)">
+                                % Satisfação
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div class="counter text-3xl font-bold gradient-text" data-target="24">
+                                0
+                            </div>
+                            <div class="text-sm mt-1" style="color:var(--text-dim)">
+                                h Suporte
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section><!-- SERVICES -->
+            <section class="py-20 px-4 sm:px-6">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16 float-in">
+                        <span class="tag">🚀 Nossos Serviços</span>
+                        <h2 class="text-3xl sm:text-4xl font-bold mt-4">Por que escolher a <span class="gradient-text">JG Sites</span>?</h2>
+                        <p class="mt-4 max-w-xl mx-auto" style="color:var(--text-dim)">Entregamos qualidade, velocidade e resultados reais para o seu negócio.</p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="card-glow rounded-xl p-6 float-in stagger-1" style="background:var(--surface)">
+                            <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4" style="background:rgba(59,130,246,.15)">
+                                <i data-lucide="smartphone" style="color:var(--accent);width:24px;height:24px"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-2">Design Responsivo</h3>
+                            <p class="text-sm" style="color:var(--text-dim)">Seu site funciona perfeitamente em celulares, tablets e computadores.</p>
+                        </div>
+                        <div class="card-glow rounded-xl p-6 float-in stagger-2" style="background:var(--surface)">
+                            <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4" style="background:rgba(6,182,212,.15)">
+                                <i data-lucide="zap" style="color:var(--accent2);width:24px;height:24px"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-2">Velocidade</h3>
+                            <p class="text-sm" style="color:var(--text-dim)">Sites rápidos que carregam em segundos e mantêm seus visitantes.</p>
+                        </div>
+                        <div class="card-glow rounded-xl p-6 float-in stagger-3" style="background:var(--surface)">
+                            <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4" style="background:rgba(34,197,94,.15)">
+                                <i data-lucide="headphones" style="color:var(--green);width:24px;height:24px"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-2">Suporte Dedicado</h3>
+                            <p class="text-sm" style="color:var(--text-dim)">Atendimento rápido e humanizado para qualquer dúvida ou ajuste.</p>
+                        </div>
+                        <div class="card-glow rounded-xl p-6 float-in stagger-1" style="background:var(--surface)">
+                            <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4" style="background:rgba(59,130,246,.15)">
+                                <i data-lucide="search" style="color:var(--accent);width:24px;height:24px"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-2">SEO Otimizado</h3>
+                            <p class="text-sm" style="color:var(--text-dim)">Seu site aparece melhor nas buscas do Google e atrai mais clientes.</p>
+                        </div>
+                        <div class="card-glow rounded-xl p-6 float-in stagger-2" style="background:var(--surface)">
+                            <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4" style="background:rgba(6,182,212,.15)">
+                                <i data-lucide="shield" style="color:var(--accent2);width:24px;height:24px"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-2">Hospedagem Incluída</h3>
+                            <p class="text-sm" style="color:var(--text-dim)">Não se preocupe com hospedagem. Cuidamos de tudo para você.</p>
+                        </div>
+                        <div class="card-glow rounded-xl p-6 float-in stagger-3" style="background:var(--surface)">
+                            <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4" style="background:rgba(34,197,94,.15)">
+                                <i data-lucide="clock" style="color:var(--green);width:24px;height:24px"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-2">Entrega Rápida</h3>
+                            <p class="text-sm" style="color:var(--text-dim)">Seu site pronto em poucos dias, sem enrolação.</p>
+                        </div>
+                    </div>
+                </div>
+            </section><!-- PROCESS -->
+            <section class="py-20 px-4 sm:px-6" style="background:var(--surface)">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-16 float-in">
+                        <span class="tag">⚙️ Como Funciona</span>
+                        <h2 class="text-3xl sm:text-4xl font-bold mt-4">Processo de <span class="gradient-text">Criação</span></h2>
+                        <p class="mt-4" style="color:var(--text-dim)">Do primeiro contato até seu site no ar, tudo de forma simples e transparente.</p>
+                    </div>
+                    <div class="process-line space-y-10">
+                        <div class="flex gap-5 float-in stagger-1">
+                            <div class="w-10 h-10 min-w-[40px] rounded-full flex items-center justify-center font-bold text-sm text-white z-10" style="background:linear-gradient(135deg,var(--accent),var(--accent2))">
+                                1
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Conversa Inicial</h3>
+                                <p class="text-sm" style="color:var(--text-dim)">Você nos conta sobre seu negócio, o que precisa e como quer que o site fique. Tudo pelo WhatsApp, sem complicação.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-5 float-in stagger-2">
+                            <div class="w-10 h-10 min-w-[40px] rounded-full flex items-center justify-center font-bold text-sm text-white z-10" style="background:linear-gradient(135deg,var(--accent),var(--accent2))">
+                                2
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Desenvolvimento</h3>
+                                <p class="text-sm" style="color:var(--text-dim)">Criamos o design e desenvolvemos o site com foco em performance, beleza e conversão de clientes.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-5 float-in stagger-3">
+                            <div class="w-10 h-10 min-w-[40px] rounded-full flex items-center justify-center font-bold text-sm text-white z-10" style="background:linear-gradient(135deg,var(--accent),var(--accent2))">
+                                3
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Revisão</h3>
+                                <p class="text-sm" style="color:var(--text-dim)">Você revisa o site e solicita ajustes até ficar exatamente como deseja. Sem custo extra.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-5 float-in stagger-4">
+                            <div class="w-10 h-10 min-w-[40px] rounded-full flex items-center justify-center font-bold text-sm text-white z-10" style="background:linear-gradient(135deg,var(--accent),var(--accent2))">
+                                4
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Lançamento 🚀</h3>
+                                <p class="text-sm" style="color:var(--text-dim)">Seu site vai ao ar, pronto para receber clientes. Hospedagem e suporte incluídos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section><!-- PLANS (HOME) -->
+            <section class="py-20 px-4 sm:px-6">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-16 float-in">
+                        <span class="tag">💰 Planos</span>
+                        <h2 class="text-3xl sm:text-4xl font-bold mt-4">Escolha o plano <span class="gradient-text">ideal</span></h2>
+                    </div>
+                    <div id="plans-home" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+                </div>
+            </section><!-- EXAMPLES (HOME) -->
+            <section class="py-20 px-4 sm:px-6" style="background:var(--surface)">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16 float-in">
+                        <span class="tag">🎨 Exemplos</span>
+                        <h2 class="text-3xl sm:text-4xl font-bold mt-4">Nossos <span class="gradient-text">Trabalhos</span></h2>
+                    </div>
+                    <div id="examples-home" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+                    <div class="text-center mt-10 float-in">
+                        <button class="btn-primary text-white font-semibold px-8 py-3 rounded-full" onclick="navigateTo('examples')">Ver Todos os Exemplos</button>
+                    </div>
+                </div>
+            </section><!-- CTA -->
+            <section class="py-20 px-4 sm:px-6 text-center">
+                <div class="max-w-2xl mx-auto float-in">
+                    <div class="float-anim inline-block mb-6">
+                        <div class="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto pulse-glow" style="background:linear-gradient(135deg,var(--accent),var(--accent2))">
+                            <i data-lucide="rocket" style="width:32px;height:32px;color:#fff"></i>
+                        </div>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Pronto para ter seu site?</h2>
+                    <p class="mb-8" style="color:var(--text-dim)">Fale conosco agora pelo WhatsApp e comece a transformar seu negócio.</p><button class="btn-whatsapp text-white font-semibold px-8 py-4 rounded-full text-lg flex items-center gap-3 mx-auto" onclick="openWhatsApp()"> <i data-lucide="message-circle" style="width:22px;height:22px"></i> Chamar no WhatsApp </button>
+                </div>
+            </section>
+            <footer class="py-8 px-4 text-center text-sm border-t" style="border-color:rgba(255,255,255,.06);color:var(--text-dim)">
+                <p>© 2025 JG Sites. Todos os direitos reservados.</p>
+            </footer>
+        </div><!-- PAGE: EXAMPLES -->
+        <div id="page-examples" class="page">
+            <section class="pt-28 pb-20 px-4 sm:px-6">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16 float-in">
+                        <span class="tag">🎨 Portfólio</span>
+                        <h2 class="text-3xl sm:text-4xl font-bold mt-4">Exemplos de <span class="gradient-text">Sites Criados</span></h2>
+                        <p class="mt-4 max-w-xl mx-auto" style="color:var(--text-dim)">Confira alguns dos sites que criamos para nossos clientes.</p>
+                    </div>
+                    <div id="examples-full" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                </div>
+            </section>
+            <footer class="py-8 px-4 text-center text-sm border-t" style="border-color:rgba(255,255,255,.06);color:var(--text-dim)">
+                <p>© 2025 JG Sites. Todos os direitos reservados.</p>
+            </footer>
+        </div><!-- PAGE: CONTACT -->
+        <div id="page-contact" class="page">
+            <section class="pt-28 pb-20 px-4 sm:px-6">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-16 float-in">
+                        <span class="tag">📞 Contato</span>
+                        <h2 class="text-3xl sm:text-4xl font-bold mt-4">Vamos <span class="gradient-text">conversar</span>?</h2>
+                        <p class="mt-4" style="color:var(--text-dim)">Escolha o plano ideal e entre em contato pelo WhatsApp.</p>
+                    </div>
+                    <div id="plans-contact" class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16"></div>
+                    <div class="card-glow rounded-xl p-8 text-center float-in" style="background:var(--surface)">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4" style="background:rgba(34,197,94,.15)">
+                            <i data-lucide="message-circle" style="color:var(--green);width:28px;height:28px"></i>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2">Fale Conosco</h3>
+                        <p class="mb-6" style="color:var(--text-dim)">Tire suas dúvidas, peça um orçamento ou comece seu projeto agora mesmo.</p><button class="btn-whatsapp text-white font-semibold px-8 py-3.5 rounded-full flex items-center gap-3 mx-auto" onclick="openWhatsApp()"> <i data-lucide="message-circle" style="width:18px;height:18px"></i> Chamar no WhatsApp </button>
+                    </div>
+                </div>
+            </section>
+            <footer class="py-8 px-4 text-center text-sm border-t" style="border-color:rgba(255,255,255,.06);color:var(--text-dim)">
+                <p>© 2025 JG Sites. Todos os direitos reservados.</p>
+            </footer>
+        </div>
+    </div>
+    <script>
+        // CONFIG
+        const defaultConfig = {
+            hero_title: 'Seu negócio merece um site profissional',
+            hero_subtitle: 'Sites modernos, rápidos e responsivos que transformam visitantes em clientes. A partir de R$110/mês.',
+            whatsapp_number: '5511999999999',
+            background_color: '#0f1117',
+            surface_color: '#1a1d27',
+            text_color: '#e2e8f0',
+            accent_color: '#3b82f6',
+            secondary_action_color: '#06b6d4',
+            font_family: 'Outfit',
+            font_size: 16
+        };
+
+        let config = { ...defaultConfig };
+
+        // EXAMPLES DATA
+        const examples = [
+            { name: 'Projeto Reforma', type: 'Reforma', color: '#f97316', link: 'https://prjeto-reforma.netlify.app' },
+            { name: 'Barbearia Classic', type: 'Barbearia', color: '#8b5cf6', link: 'https://projbarbearia.netlify.app' },
+        ];
+
+        function openWhatsApp(msg) {
+            const num = config.whatsapp_number || defaultConfig.whatsapp_number;
+            const text = msg || 'Olá! Tenho interesse em criar um site com a JG Sites.';
+            window.open(`https://wa.me/${5535999314821}?text=${encodeURIComponent(text)}`, '_blank');
+        }
+
+        // PLAN CARDS HTML
+        function planCardHTML(type) {
+            const basic = `
+      <div class="card-glow rounded-xl p-6 sm:p-8 relative float-in" style="background:var(--surface)">
+        <span class="tag">Básico</span>
+        <h3 class="font-bold text-2xl mt-4 mb-1">Plano Básico</h3>
+        <div class="flex items-baseline gap-1 mb-1"><span class="text-3xl font-extrabold gradient-text">R$110</span><span class="text-sm" style="color:var(--text-dim)">x 3 sem juros</span></div>
+        <p class="text-xs mb-6" style="color:var(--text-dim)">Total: R$330</p>
+        <ul class="space-y-3 mb-8 text-sm">
+          <li class="flex items-start gap-2"><i data-lucide="check" style="width:16px;height:16px;color:var(--green);min-width:16px;margin-top:2px"></i>1 Página (Landing Page)</li>
+          <li class="flex items-start gap-2"><i data-lucide="check" style="width:16px;height:16px;color:var(--green);min-width:16px;margin-top:2px"></i>Botão WhatsApp direto</li>
+          <li class="flex items-start gap-2"><i data-lucide="check" style="width:16px;height:16px;color:var(--green);min-width:16px;margin-top:2px"></i>Galeria simples de fotos</li>
+          <li class="flex items-start gap-2"><i data-lucide="check" style="width:16px;height:16px;color:var(--green);min-width:16px;margin-top:2px"></i>Horário de funcionamento</li>
+          <li class="flex items-start gap-2"><i data-lucide="check" style="width:16px;height:16px;color:var(--green);min-width:16px;margin-top:2px"></i>Mapa do Google</li>
+          <li class="flex items-start gap-2"><i data-lucide="check" style="width:16px;height:16px;color:var(--green);min-width:16px;margin-top:2px"></i>Site Responsivo</li>
+          <li class="flex items-start gap-2"><i data-lucide="check" style="width:16px;height:16px;color:var(--green);min-width:16px;margin-top:2px"></i>Hospedagem incluída</li>
+          <li class="flex items-start gap-2"><i data-lucide="check" style="width:16px;height:16px;color:var(--green);min-width:16px;margin-top:2px"></i>Suporte básico</li>
+        </ul>
+        <button class="btn-whatsapp w-full text-white font-semibold py-3 rounded-full flex items-center justify-center gap-2" onclick="openWhatsApp('Olá quero saber mais sobre o Plano Básico de site.')">
+          <i data-lucide="message-circle" style="width:18px;height:18px"></i> Quero este plano
+        </button>
+      </div>`;
+
+            const pro = `
+      <div class="card-glow rounded-xl p-6 sm:p-8 relative float-in stagger-2" style="background:var(--surface);border-color:rgba(59,130,246,.3)">
+        <div class="popular-badge">⭐ POPULAR</div>
+        <span class="tag tag-pro">Profissional</span>
+        <h3 class="font-bold text-2xl mt-4 mb-1">Plano Profissional</h3>
+        <div class="flex items-baseline gap-1 mb-1"><span class="text-3xl font-extrabold gradient-text">R$200</span><span class="text-sm" style="color:var(--text-dim)">x 3 sem juros</span></div>
+        <p class="text-xs mb-6" style="color:var(--text-dim)">Total: R$600</p>
+        <ul class="space-y-3 mb-8 text-sm">
+          <li class="flex items-start gap-2"><i data-lucide="check" style="width:16px;height:16px;color:var(--accent2);min-width:16px;margin-top:2px"></i>Até 5 Páginas</li>
+          <li class="flex items-start gap-2"><i data-lucide="check" style="width:16px;height:16px;color:var(--accent2);min-width:16px;margin-top:2px"></i>Página de serviço separada</li>
+          <li class="flex items-start gap-2"><i data-lucide="check" style="width:16px;height:16px;color:var(--accent2);min-width:16px;margin-top:2px"></i>SEO Básico (aparecer no Google)</li>
+          <li class="flex items-start gap-2"><i data-lucide="check" style="width:16px;height:16px;color:var(--accent2);min-width:16px;margin-top:2px"></i>Formulário de contato</li>
+          <li class="flex items-start gap-2"><i data-lucide="check" style="width:16px;height:16px;color:var(--accent2);min-width:16px;margin-top:2px"></i>Melhor organização visual</li>
+          <li class="flex items-start gap-2"><i data-lucide="check" style="width:16px;height:16px;color:var(--accent2);min-width:16px;margin-top:2px"></i>Ajustes mensais incluídos</li>
+          <li class="flex items-start gap-2"><i data-lucide="check" style="width:16px;height:16px;color:var(--accent2);min-width:16px;margin-top:2px"></i>Tudo do Plano Básico</li>
+        </ul>
+        <button class="btn-primary w-full text-white font-semibold py-3 rounded-full flex items-center justify-center gap-2" onclick="openWhatsApp('Olá quero saber mais sobre o Plano Completo.')">
+          <i data-lucide="rocket" style="width:18px;height:18px"></i> Quero este plano
+        </button>
+      </div>`;
+
+            return basic + pro;
+        }
+
+        function exampleCardHTML(ex, i) {
+            return `
+      <div class="example-card float-in stagger-${(i % 3) + 1}">
+        <div class="p-6 flex flex-col justify-end relative z-10 h-full">
+          <span class="tag mb-2 w-fit" style="background:${ex.color}22;color:${ex.color}">${ex.type}</span>
+          <h3 class="font-bold text-lg">${ex.name}</h3>
+        </div>
+        <div class="overlay">
+          <button class="btn-primary text-white font-semibold px-6 py-2.5 rounded-full text-sm flex items-center gap-2 w-full justify-center" onclick="window.open('${ex.link}','_blank')">
+            <i data-lucide="external-link" style="width:16px;height:16px"></i> Visitar Site
+          </button>
+        </div>
+      </div>`;
+        }
+
+        // RENDER DYNAMIC SECTIONS
+        function renderPlans() {
+            document.getElementById('plans-home').innerHTML = planCardHTML();
+            document.getElementById('plans-contact').innerHTML = planCardHTML();
+        }
+
+        function renderExamples() {
+            const homeHTML = examples.slice(0, 3).map((e, i) => exampleCardHTML(e, i)).join('');
+            const fullHTML = examples.map((e, i) => exampleCardHTML(e, i)).join('');
+            document.getElementById('examples-home').innerHTML = homeHTML;
+            document.getElementById('examples-full').innerHTML = fullHTML;
+        }
+
+        // NAVIGATION
+        function navigateTo(page) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById('page-' + page).classList.add('active');
+            document.querySelectorAll('[data-nav]').forEach(n => {
+                n.style.color = n.dataset.nav === page ? 'var(--accent)' : 'var(--text-dim)';
+            });
+            document.getElementById('app').scrollTop = 0;
+            setTimeout(() => { observeFloatIns(); lucide.createIcons() }, 50);
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const btn = document.getElementById('hamburger');
+            menu.classList.toggle('open');
+            btn.classList.toggle('menu-open');
+        }
+
+        // SCROLL ANIMATIONS
+        function observeFloatIns() {
+            const obs = new IntersectionObserver((entries) => {
+                entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target) } });
+            }, { threshold: 0.1, root: document.getElementById('app') });
+            document.querySelectorAll('.float-in:not(.visible)').forEach(el => obs.observe(el));
+        }
+
+        // COUNTER ANIMATION
+        function animateCounters() {
+            document.querySelectorAll('.counter').forEach(el => {
+                const target = parseInt(el.dataset.target);
+                let current = 0;
+                const step = Math.max(1, Math.floor(target / 40));
+                const interval = setInterval(() => {
+                    current += step;
+                    if (current >= target) { current = target; clearInterval(interval) }
+                    el.textContent = current;
+                }, 30);
+            });
+        }
+
+        // PARTICLES
+        function createParticles() {
+            const container = document.getElementById('particles');
+            for (let i = 0; i < 20; i++) {
+                const p = document.createElement('div');
+                p.className = 'particle';
+                p.style.cssText = `width:${Math.random() * 4 + 2}px;height:${Math.random() * 4 + 2}px;left:${Math.random() * 100}%;top:${Math.random() * 100}%;background:${Math.random() > .5 ? 'var(--accent)' : 'var(--accent2)'};animation:float ${Math.random() * 4 + 3}s ease-in-out infinite;animation-delay:${Math.random() * 3}s;opacity:${Math.random() * .3 + .1}`;
+                container.appendChild(p);
+            }
+        }
+
+        // ELEMENT SDK
+        function applyConfig(cfg) {
+            const c = { ...defaultConfig, ...cfg };
+            document.documentElement.style.setProperty('--bg', c.background_color);
+            document.documentElement.style.setProperty('--surface', c.surface_color);
+            document.documentElement.style.setProperty('--text', c.text_color);
+            document.documentElement.style.setProperty('--accent', c.accent_color);
+            document.documentElement.style.setProperty('--accent2', c.secondary_action_color);
+
+            const title = document.getElementById('heroTitle');
+            if (title) {
+                const parts = (c.hero_title || defaultConfig.hero_title).split(' ');
+                const last2 = parts.slice(-2).join(' ');
+                const rest = parts.slice(0, -2).join(' ');
+                title.innerHTML = `${rest}<br><span class="gradient-text">${last2}</span>`;
+            }
+            const sub = document.getElementById('heroSubtitle');
+            if (sub) sub.textContent = c.hero_subtitle || defaultConfig.hero_subtitle;
+
+            document.body.style.fontFamily = `${c.font_family || defaultConfig.font_family}, sans-serif`;
+            const base = c.font_size || defaultConfig.font_size;
+            document.body.style.fontSize = base + 'px';
+        }
+
+        async function initializeApp() {
+            try {
+                if (window.elementSdk) {
+                    window.elementSdk.init({
+                        defaultConfig,
+                        onConfigChange: async (cfg) => { config = { ...defaultConfig, ...cfg }; applyConfig(cfg) },
+                        mapToCapabilities: (cfg) => ({
+                            recolorables: [
+                                { get: () => cfg.background_color || defaultConfig.background_color, set: v => { config.background_color = v; window.elementSdk.setConfig({ background_color: v }) } },
+                                { get: () => cfg.surface_color || defaultConfig.surface_color, set: v => { config.surface_color = v; window.elementSdk.setConfig({ surface_color: v }) } },
+                                { get: () => cfg.text_color || defaultConfig.text_color, set: v => { config.text_color = v; window.elementSdk.setConfig({ text_color: v }) } },
+                                { get: () => cfg.accent_color || defaultConfig.accent_color, set: v => { config.accent_color = v; window.elementSdk.setConfig({ accent_color: v }) } },
+                                { get: () => cfg.secondary_action_color || defaultConfig.secondary_action_color, set: v => { config.secondary_action_color = v; window.elementSdk.setConfig({ secondary_action_color: v }) } }
+                            ],
+                            borderables: [],
+                            fontEditable: { get: () => cfg.font_family || defaultConfig.font_family, set: v => { config.font_family = v; window.elementSdk.setConfig({ font_family: v }) } },
+                            fontSizeable: { get: () => cfg.font_size || defaultConfig.font_size, set: v => { config.font_size = v; window.elementSdk.setConfig({ font_size: v }) } }
+                        }),
+                        mapToEditPanelValues: (cfg) => new Map([
+                            ['hero_title', cfg.hero_title || defaultConfig.hero_title],
+                            ['hero_subtitle', cfg.hero_subtitle || defaultConfig.hero_subtitle],
+                            ['whatsapp_number', cfg.whatsapp_number || defaultConfig.whatsapp_number]
+                        ])
+                    });
+                }
+            } catch (e) { console.error('SDK init error:', e) }
+
+            renderPlans();
+            renderExamples();
+            lucide.createIcons();
+            observeFloatIns();
+            createParticles();
+            setTimeout(animateCounters, 500);
+        }
+
+        // INIT
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initializeApp);
+        } else {
+            initializeApp();
+        }
+    </script>
+    <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'9e37c418e46dfefc',t:'MTc3NDcxMjc2OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+</body>
+</html>
