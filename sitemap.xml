@@ -1,6 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<urlser xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://jgsites.com.br/</loc>
+		<lastmod>2026-03-30</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.0</priority>
 	</url>
-</urlser>
+</urlset>
